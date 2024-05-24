@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Croquis de Ubicación</title>
+    <link rel="stylesheet" href="print.css" />
+    <link rel="stylesheet" href="init.css" />
+    <link
+      rel="stylesheet"
+      href="https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css"
+    />
+  </head>
+  <body style="--hbpx: 4rem">
+    <button
+      class="hbfloat"
+      onclick="(confirm('¿Cerrar pestaña actual?') == true) ? window.close() : null"
+    >
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="hbfloat" onclick="window.print()">
+      <i class="fas fa-print"></i>
+    </button>
+    <div>
+      <div class="hbrow hbtalign hbw hbalig-items" style="--hbw: 100%">
+        <div class="hbcol-2">
+          <img
+            class="hbimg"
+            alt="logo"
+            src="https://aplicacionesdast.com/images/institutional/logo/E01621DF-1592-4656-ADF5-B69091B4B3FF.jpeg"
+            width="75"
+            height="75"
+          />
+        </div>
+        <div class="hbcol-8">
+          <h2
+            class="hbtitle"
+            style="--hbfw: normal; --hbfls: 0.5em; --hbfs: 13px; --hbfws: 5.5em"
+          >
+            DECLARACION JURADA
+          </h2>
+        </div>
+        <div class="hbcol-2"></div>
+      </div>
+
+      <p class="hbp" style="--hbtalign: justify; --hbfs: 15px; margin: 0">
+        Yo<label class="hbline-bottom hbpx" style="--hbpx: 10px"
+          ><b>MIGUEL ANGUEL BONILLA DOMINGUEZ</b></label
+        >, con
+        <label class="hbline-bottom hbpx" style="--hbpx: 10px"><b>20</b></label>
+        años de edad, con número de<br />
+        DUI:
+        <label for="" style="--hbpx: 10px" class="hbline-bottom hbpx"
+          >12345678-9</label
+        >, profesión:
+        <label class="hbline-bottom hbpx" style="--hbpx: 10px"
+          ><b>PROGRAMADOR</b></label
+        >
+        en mi calidad de<sup><small>1</small></sup
+        >________________ <br />
+        con domicilio en:
+        <label class="hbline-bottom hbpx" style="--hbpx: 10px"
+          ><b
+            >Dirección: 6ta. Calle Poniente # 310 y 5ta Ave. Norte, local 7,
+            Centro Comercial Plaza San Francisco, San Miguel</b
+          ></label
+        >
+        Declaro bajo juramento de lealtad y honestidad ser propietario (a) de los activos y bienes del hogar que se especifican a continuación y que se ubican en domicilio antes mencionado:
+      </p>
+      <table>
+        <thead>
+          <th>Calidad</th>
+          <th>DESCRIPCIÓN DEL BIEN</th>
+          <th>Calidad</th>
+          <th>Calidad</th>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>

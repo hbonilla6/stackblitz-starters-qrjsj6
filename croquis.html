@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Croquis de Ubicación</title>
+    <link rel="stylesheet" href="print.css" />
+    <link rel="stylesheet" href="init.css" />
+    <link
+      rel="stylesheet"
+      href="https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css"
+    />
+  </head>
+  <body
+    style="--hbw: 750px; --hbpx: 4rem"
+    onafterprint="(confirm('¿Cerrar pestaña actual?') == true) ? window.close() : null"
+  >
+    <!-- <body onafterprint="window.close()" onload="window.print(this)"> -->
+    <div class="container">
+      <div>
+        <img
+          class="hbimg"
+          alt="logo"
+          src="https://aplicacionesdast.com/images/institutional/logo/E01621DF-1592-4656-ADF5-B69091B4B3FF.jpeg"
+          width="75"
+          height="75"
+        />
+      </div>
+      <button
+        class="hbfloat"
+        onclick="(confirm('¿Cerrar pestaña actual?') == true) ? window.close() : null"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="hbfloat" onclick="window.print()">
+        <i class="fas fa-print"></i>
+      </button>
+      <h2 class="hbtitle" style="--hbmb: 40px">
+        Ubicación del Negocio y Casa de Habitación<br />Programa de Microcrédito
+        Diario
+      </h2>
+      <div class="croquis" id="croquisNegocio">
+        <h4 class="hbttransform">
+          Croquis del Negocio
+          <span class="hidePrint">
+            <i
+              onclick="clearCanvas('canvasNegocio')"
+              class="far fa-trash-alt"
+              role="button"
+              title="Limpiar"
+            ></i>
+            |
+            <input
+              type="color"
+              onchange="changeColor(this.value)"
+              value="#000000"
+              title="Cambiar color"
+            />
+          </span>
+        </h4>
+        <canvas id="canvasNegocio" class="hbborder"></canvas>
+      </div>
+      <div class="croquis" id="croquisCasa">
+        <h4 class="hbttransform">
+          Croquis de la Casa de Habitación
+          <span class="hidePrint">
+            <i
+              onclick="clearCanvas('canvasCasa')"
+              class="far fa-trash-alt"
+              role="button"
+              title="Limpiar"
+            ></i>
+            |
+            <input
+              type="color"
+              onchange="changeColor(this.value)"
+              value="#000000"
+              title="Cambiar color"
+            />
+          </span>
+        </h4>
+        <canvas id="canvasCasa" class="hbborder"></canvas>
+      </div>
+    </div>
+    <script src="croquiz.js"></script>
+  </body>
+</html>

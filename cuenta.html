@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Report</title>
+    <link rel="stylesheet" href="print.css" />
+    <link rel="stylesheet" href="init.css" />
+    <link
+      rel="stylesheet"
+      href="https://adminlte.io/themes/v3/plugins/fontawesome-free/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="hbrow hbtalign hbw" style="--hbw: 100%">
+      <div class="hbcol-2">
+        <img
+          class="hbimg"
+          alt="logo"
+          src="https://aplicacionesdast.com/images/institutional/logo/E01621DF-1592-4656-ADF5-B69091B4B3FF.jpeg"
+          width="75"
+          height="75"
+        />
+      </div>
+      <div class="hbcol-8">
+        <h2 class="title hbtitle hbfs" style="--hbfs: 38px">
+          MI GENTE S.A DE C.V.
+        </h2>
+        <h2 class="hbmy">Reporte de cuenta</h2>
+        <p class="hbmy">Date: <span id="reportDate"></span></p>
+        <!-- <h5 class="text-center m-2">
+          MI GENTE S.A DE C.V
+        </h5> -->
+      </div>
+      <div class="hbcol-2"></div>
+    </header>
+    <!-- Header Section -->
+    <!-- <header class="hbtitle hbtalign hbbg hbcolor">
+      <h1>Company Name</h1>
+      <h2>Account Report</h2>
+    </header> -->
+
+    <!-- Main Content -->
+    <main>
+      <!-- Summary Section -->
+      <section>
+        <h3 class="hbtitle hbtalign">Summary</h3>
+        <div class="hbrow hbbetween">
+          <div>
+            <h4>Total Revenue</h4>
+            <p>$XXX,XXX</p>
+          </div>
+          <div>
+            <h4>Net Profit</h4>
+            <p>$XX,XXX</p>
+          </div>
+          <div>
+            <h4>Expenses</h4>
+            <p>$XX,XXX</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detailed Breakdown -->
+      <section>
+        <h3 class="hbtitle hbtalign">Detailed Breakdown</h3>
+        <table class="hbtable-striped">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example rows -->
+            <tr>
+              <td>Product A</td>
+              <td>$X,XXX</td>
+              <td>01/01/2024</td>
+            </tr>
+            <tr>
+              <td>Service B</td>
+              <td>$X,XXX</td>
+              <td>01/15/2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Additional Sections (Optional) -->
+      <section>
+        <h3 class="hbtitle hbtalign">Additional Data</h3>
+        <p>Charts or graphs can be added here if needed.</p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p class="hbtalign">
+        Page <span id="pageNumber"></span> of <span id="totalPages"></span>
+      </p>
+    </footer>
+
+    <!-- JS to generate dynamic content -->
+    <script>
+      document.getElementById('reportDate').innerText =
+        new Date().toLocaleDateString();
+
+      // Calculate total pages and current page number
+      window.onload = function () {
+        let pages = Math.ceil(document.body.scrollHeight / window.innerHeight);
+        document.getElementById('totalPages').innerText = pages;
+        // Assuming a single-page document for demo purposes
+        document.getElementById('pageNumber').innerText = '1';
+      };
+    </script>
+  </body>
+</html>
